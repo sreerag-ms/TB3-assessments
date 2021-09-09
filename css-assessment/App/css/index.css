@@ -4,11 +4,17 @@ body {
     font-size: 20px;
     padding: 0;
     margin: 0;
-    --bodyPadding: 10px 40px;
+    --bodyPadding: 10px 7vw;
     --accentColor: #8fe5d0;
-    --backGroundAccentColor: #DDDDDD;
+    --backGroundAccentColor: #e6e6e6;
     --darkAccentColor: rgba(25, 193, 155, 255);
-    --darkFontColor: rgba(0, 0, 0, .7)
+    --darkFontColor: rgba(0, 0, 0, .7);
+    --titleFont:4rem;
+    --smallFont: 1rem;
+    --smallWeight:lighter;
+    
+
+
 }
 
 .row {
@@ -20,6 +26,7 @@ body {
     display: flex;
     flex-flow: column wrap;
 }
+
 
 .adaptiveRow {
     display: flex;
@@ -49,17 +56,21 @@ body {
 }
 
 .bodySignUpButton {
-    margin-top: 2rem;
+    margin-top: 9vh;
+    box-shadow: -1px 1px 10px -3px #ccc;
+
 }
 
 .signupButton:hover {
-    box-shadow: 0px 0px 4px 1px #ccc;
+    background-color: var(--darkAccentColor);
+    box-shadow: -1px 1px 8px -3px #ccc;
+
 }
 
 .introScreen {
     box-sizing: border-box;
     width: 100%;
-    height: 36rem;
+    height: 70vh;
     align-items: center;
     justify-content: space-between;
     padding: var(--bodyPadding);
@@ -69,9 +80,12 @@ body {
 
 .getStarted {
     /* height: 100%; */
+    position: relative;
     width: 40vw;
     align-items: flex-start;
     justify-content: center;
+/* border: solid 1px; */
+
 
 }
 
@@ -80,41 +94,62 @@ body {
 
 }
 
-.introDescription {
-    font-size: .8rem;
-    font-weight: lighter;
+.smallfont {
+    font-size: var(--smallFont);
+    font-weight: var(--smallWeight);
 }
 
 .introImageSection {
+    position: relative;
     align-items: center;
     justify-content: center;
-
+/* border: solid 1px; */
     width: 40vw;
-    height: 500px;
+    overflow:hidden;
+    transition: ease .4s;
+
+    /* height: 500px; */
 }
 
 .introImage {
     width: 40vw;
+
+}
+.introImageSection:hover{
+    transform: rotate(20deg);
+    transform: rotate(-20deg);
+    /* transform: rotate(0deg); */
+
+
 }
 
 .searchSection {
+    box-sizing: border-box;
     background: var(--backGroundAccentColor);
     width: 100vw;
+    height: 21vh;
+    padding: var(--bodyPadding);
     align-items: center;
     justify-content: center;
 }
 
 .searchButton {
+    border: solid 1px;
     background: var(--accentColor);
     font-weight: bold;
-    margin: 40px 10px;
+    margin: 20px 10px;
     padding: 2px 10px;
+    transition: ease .4s;
+
+}
+.searchButton:hover{
+    background-color: var(--darkAccentColor);
 
 }
 
 .emailSearch {
     box-sizing: border-box;
-    width: 40vw;
+    width: 60vw;
     margin: 40px 10px;
     padding: 2px 10px;
 
@@ -122,7 +157,7 @@ body {
 
 .searchButton,
 .emailSearch {
-    height: 2.5rem;
+    height: 3rem;
     outline: none;
     border: none;
     border-radius: .5rem;
@@ -146,9 +181,8 @@ body {
 }
 
 .aboutDescription {
-    font-size: .8rem;
-    font-weight: lighter;
-    text-align: center;
+    /* background: red; */
+    text-align: left;
 
 }
 
@@ -160,7 +194,7 @@ body {
 }
 
 .cardsWrapper {
-    margin: 4rem 0;
+    margin: 2rem 0;
     /* height: fit-content; */
     width: 100%;
     align-items: center;
@@ -174,8 +208,8 @@ body {
     box-sizing: border-box;
     padding: 1.5rem;
     margin: 5px;
-    width: 15rem;
-    height: 15rem;
+    width: 25vw;
+    height: 25vw;
     background: var(--backGroundAccentColor);
     border-radius: .6rem;
 }
@@ -192,17 +226,13 @@ body {
 
 }
 
-.cardText {
-    font-size: .8rem;
-
-    font-weight: lighter;
-}
-
 
 .footer {
-    padding: 20px 40px;
+    padding: var(--bodyPadding);
+    height: 15vh;
     background: var(--backGroundAccentColor);
     justify-content: space-between;
+    align-items: center;
 }
 
 .footerNote {
@@ -218,12 +248,19 @@ body {
 margin-bottom: 1rem;
 }
 .footerNoteDescription {
-    font-size: .6rem;
+    font-size: .8rem;
 
     font-weight: lighter;
 }
+.rightfooterNote{
+    text-align: right;
+}
 
 @media screen and (max-Width:835px) {
+    body{
+        --bodyPadding:10px 20px;
+        --smallFont:.9rem
+    }
     .adaptiveRow {
         /* box-shad; */
         display: flex;
@@ -234,16 +271,35 @@ margin-bottom: 1rem;
     height: 60vw;
     margin-bottom: 20px;
     min-width: 300px;
+    max-width: 500px;
+    max-height: 400px;
+}
+.cardHeading{
+    font-size: 2.5rem;
+
+}
+.cardSubHeading{
+    font-size: 1.4rem;
 }
     .adaptiveColumn {
         display: flex;
         flex-flow: row wrap;
+    }
+    .bodySignUpButton {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
     }
 
     .searchButton {
         width: 40vw;
         margin: 5px 10px 20px 10px;
         padding: 2px 10px;
+    }
+    .introScreen{
+        height: 70vh;
+    }
+    .introImage{
+        width: 60vw;
     }
 
     .emailSearch {
@@ -256,9 +312,15 @@ margin-bottom: 1rem;
         align-items: center;
         justify-content: center;
     }
-
+    .pageBody{
+        margin-top: 8vh;
+    }
+    .introScreen{
+        height: 70vh;
+    }
     .introImageSection {
         width: 100%;
+        height: 100vw;
     }
 
     .introHeading {
@@ -269,12 +331,19 @@ margin-bottom: 1rem;
         text-align: center;
     }
     .searchButton,.emailSearch{
-        min-width: 80vw;
+        min-width: 100%;
     }
     .footerNote,.contact{
         width: 80vw;
     }
+    .rightfooterNote{
+        text-align: left;
+    }
 }
-@media screen and (max-Width:1000px) {
-    .introHeading{}
+@media screen and (max-Width:1080px) {
+    body{
+    --smallFont: .7rem;
+
+        /* --bodyPadding:25px 10px; */
+    }
 }

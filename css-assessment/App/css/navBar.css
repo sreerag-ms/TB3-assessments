@@ -1,5 +1,4 @@
-
-.nav{
+.nav {
     box-sizing: border-box;
     position: fixed;
     top: 0;
@@ -7,47 +6,77 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: var(--bodyPadding);
     /* border: solid 1px blue; */
-    background:  whitesmoke;
-
+    background: whitesmoke;
+    height: 9vh;
     z-index: 100;
 
 }
-.leftNav{
-    width: 50%;
-    justify-content: space-around;
+
+.leftNav {
+    width: 60%;
+    justify-content: flex-start;
     align-items: center;
-
-
 }
-.leftNav:first-child{
-    /* font-size: 2rem; */
-}
-.rightNav{
-    width: 50%vw;
+
+.rightNav {
+    width: 40%;
     justify-content: flex-end;
     align-items: center;
 }
 
-.basicNavItem{
-    margin-right: 10px;
+.basicNavItem {
+    font-size: .9rem;
+    margin-right: 50px;
     text-decoration: none;
     color: var(--darkFontColor);
 }
 
-#title{
-    font-size: 2rem;
+.basicNavItem:hover {
+    text-decoration: underline;
+}
+
+#title {
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
-@media screen and (max-width:835px){
-.basicNavItem{
-    display: none;
-    
-}
-#title,#login{
-    display: inline;
+@media screen and (max-width:835px) {
+    .nav {
+        padding: var(--bodyPadding);
+    height: 7vh;
+    }
 
+    .leftNav {
+        width: 40%;
+    }
+
+    .rightNav {
+        width: 60%;
+    }
+
+    .basicNavItem {
+        display: none;
+        margin-right: 0;
+
+
+    }
+.navBarSignUpButton{
+    background: transparent ;
+    color: var(--darkAccentColor);
 }
+.navBarSignUpButton:hover{
+    text-decoration: underline;
+    box-shadow: none;
+}
+    #title,
+    #login {
+        display: inline;
+
+    }
+
+    #title {
+        font-size: 1.2rem;
+    }
 }
