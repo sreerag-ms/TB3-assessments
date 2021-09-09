@@ -4,15 +4,18 @@ body {
     font-size: 20px;
     padding: 0;
     margin: 0;
+
+    /* Design Variables */
+
     --bodyPadding: 10px 7vw;
     --accentColor: #8fe5d0;
     --backGroundAccentColor: #e6e6e6;
     --darkAccentColor: rgba(25, 193, 155, 255);
     --darkFontColor: rgba(0, 0, 0, .7);
-    --titleFont:4rem;
+    --titleFont: 4rem;
     --smallFont: 1rem;
-    --smallWeight:lighter;
-    
+    --smallWeight: lighter;
+
 
 
 }
@@ -84,7 +87,7 @@ body {
     width: 40vw;
     align-items: flex-start;
     justify-content: center;
-/* border: solid 1px; */
+    /* border: solid 1px; */
 
 
 }
@@ -103,23 +106,13 @@ body {
     position: relative;
     align-items: center;
     justify-content: center;
-/* border: solid 1px; */
     width: 40vw;
-    overflow:hidden;
-    transition: ease .4s;
+    overflow: hidden;
 
-    /* height: 500px; */
 }
 
 .introImage {
     width: 40vw;
-
-}
-.introImageSection:hover{
-    transform: rotate(20deg);
-    transform: rotate(-20deg);
-    /* transform: rotate(0deg); */
-
 
 }
 
@@ -142,12 +135,14 @@ body {
     transition: ease .4s;
 
 }
-.searchButton:hover{
+
+.searchButton:hover {
     background-color: var(--darkAccentColor);
 
 }
 
 .emailSearch {
+    box-shadow: -1px 1px 10px -3px #ccc;
     box-sizing: border-box;
     width: 60vw;
     margin: 40px 10px;
@@ -195,7 +190,6 @@ body {
 
 .cardsWrapper {
     margin: 2rem 0;
-    /* height: fit-content; */
     width: 100%;
     align-items: center;
     justify-content: space-around;
@@ -239,52 +233,61 @@ body {
     margin: 0px 0px 20px 0px;
     width: 40vw;
 }
-.email{
+
+.email {
     font-size: .8rem;
     font-weight: normal;
 }
-.footerNoteHeading{
+
+.footerNoteHeading {
     font-weight: bold;
-margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
+
 .footerNoteDescription {
     font-size: .8rem;
 
     font-weight: lighter;
 }
-.rightfooterNote{
+
+.rightfooterNote {
     text-align: right;
 }
 
 @media screen and (max-Width:835px) {
-    body{
-        --bodyPadding:10px 20px;
-        --smallFont:.9rem
+    body {
+        --bodyPadding: 10px 20px;
+        --smallFont: .9rem
     }
-    .adaptiveRow {
-        /* box-shad; */
-        display: flex;
-        flex-flow: column ;
-    }
-.card{
-    width: 80vw;
-    height: 60vw;
-    margin-bottom: 20px;
-    min-width: 300px;
-    max-width: 500px;
-    max-height: 400px;
-}
-.cardHeading{
-    font-size: 2.5rem;
 
-}
-.cardSubHeading{
-    font-size: 1.4rem;
-}
+    .adaptiveRow {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .card {
+        width: 80vw;
+        height: 60vw;
+        margin-bottom: 20px;
+        min-width: 300px;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .cardHeading {
+        font-size: 2.5rem;
+
+    }
+
+    .cardSubHeading {
+        font-size: 1.4rem;
+    }
+
     .adaptiveColumn {
         display: flex;
         flex-flow: row wrap;
     }
+
     .bodySignUpButton {
         margin-top: 2vh;
         margin-bottom: 2vh;
@@ -295,10 +298,12 @@ margin-bottom: 1rem;
         margin: 5px 10px 20px 10px;
         padding: 2px 10px;
     }
-    .introScreen{
+
+    .introScreen {
         height: 70vh;
     }
-    .introImage{
+
+    .introImage {
         width: 60vw;
     }
 
@@ -312,12 +317,15 @@ margin-bottom: 1rem;
         align-items: center;
         justify-content: center;
     }
-    .pageBody{
-        margin-top: 8vh;
+
+    .pageBody {
+        margin-top: 9vh;
     }
-    .introScreen{
+
+    .introScreen {
         height: 70vh;
     }
+
     .introImageSection {
         width: 100%;
         height: 100vw;
@@ -330,19 +338,36 @@ margin-bottom: 1rem;
     .introDescription {
         text-align: center;
     }
-    .searchButton,.emailSearch{
+
+    .searchButton,
+    .emailSearch {
         min-width: 100%;
     }
-    .footerNote,.contact{
+
+    .footer {
+        padding: var(--bodyPadding);
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        height: 30vh;
+        background: var(--backGroundAccentColor);
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footerNote,
+    .contact {
         width: 80vw;
     }
-    .rightfooterNote{
+
+    .rightfooterNote {
         text-align: left;
     }
 }
+
 @media screen and (max-Width:1080px) {
-    body{
-    --smallFont: .7rem;
+    body {
+        --smallFont: .7rem;
 
         /* --bodyPadding:25px 10px; */
     }

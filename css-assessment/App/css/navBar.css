@@ -45,7 +45,7 @@
 @media screen and (max-width:835px) {
     .nav {
         padding: var(--bodyPadding);
-    height: 7vh;
+        height: 8vh;
     }
 
     .leftNav {
@@ -62,14 +62,17 @@
 
 
     }
-.navBarSignUpButton{
-    background: transparent ;
-    color: var(--darkAccentColor);
-}
-.navBarSignUpButton:hover{
-    text-decoration: underline;
-    box-shadow: none;
-}
+
+    .navBarSignUpButton {
+        background: transparent;
+        color: var(--darkAccentColor);
+    }
+
+    .navBarSignUpButton:hover {
+        text-decoration: underline;
+        box-shadow: none;
+    }
+
     #title,
     #login {
         display: inline;
