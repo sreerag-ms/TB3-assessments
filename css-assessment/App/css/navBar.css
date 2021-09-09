@@ -1,0 +1,45 @@
+
+.nav{
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 20px 20px;
+    /* border: solid 1px blue; */
+    background:  whitesmoke;
+
+    z-index: 100;
+
+}
+.leftNav{
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 1px;
+
+
+}
+.leftNav:first-child{
+    /* font-size: 2rem; */
+}
+.rightNav{
+    width: 30vw;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.basicNavItem{
+    margin-right: 10px;
+}
+
+#title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width:700px){
+
+}
