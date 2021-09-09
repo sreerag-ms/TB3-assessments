@@ -4,14 +4,27 @@ body{
     font-size: 20px;
     padding: 0;
     margin: 0;
-    --bodyPadding:2px 40px;
+    --bodyPadding:10px 40px;
     --accentColor:#8fe5d0;
+    --backGroundAccentColor:#DDDDDD;
+    --darkAccentColor:rgba(25,193,155,255);
+    --darkFontColor:rgba(0 ,0,0,.7)
+
 }
 .row{
     display: flex;
     flex-flow: row wrap;
 }
+
 .column{
+    display: flex;
+    flex-flow: column wrap;
+}
+.adaptiveRow{
+    display: flex;
+    flex-flow: row wrap;
+}
+.adaptiveColumn{
     display: flex;
     flex-flow: column wrap;
 }
@@ -64,5 +77,111 @@ body{
 .introImage{
     width: 40vw;
 }
-/* NavBar */
+.searchSection{
+    background: var(--backGroundAccentColor);
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.searchButton{
+    background: var(--accentColor);
+    font-weight: bold;
 
+}
+.emailSearch{
+    box-sizing: border-box;
+    width:40vw;
+    margin: 40px 10px;
+
+    padding: 2px 10px;
+
+}
+.searchButton,.emailSearch{
+    height:2.5rem;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+
+
+
+}
+.about{
+    box-sizing: border-box;
+    margin: 4rem 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px;
+    height: fit-content;
+    padding: var(--bodyPadding);
+}
+.aboutHeader{
+    text-align: center;
+}
+.aboutDescription{
+    font-size: .8rem;
+    font-weight: lighter;
+
+}
+.aboutText{
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+.cardsWrapper{
+    margin: 4rem 0;
+    /* height: fit-content; */
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    border: solid 2px;
+    
+}
+.card{
+    align-items: flex-start;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    margin: 5px;
+    width: 15rem;
+    height: 15rem;
+    background: var(--backGroundAccentColor);
+    border-radius: .6rem;
+}
+.cardHeading{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--darkAccentColor);
+}
+.cardSubHeading{
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+.cardText{
+    font-size: .8rem;
+
+    font-weight: lighter;
+}
+/* .searchButton */
+/* NavBar */
+.footer{
+    padding: var(--bodyPadding);
+    background: var(--backGroundAccentColor);
+    justify-content: space-between;
+    /* height: 200px; */
+}
+.footerNote{
+    width: 40vw;
+}
+.footerNoteDescription{
+    font-size: .6rem;
+
+    font-weight: lighter;
+}
+@media screen and (max-Width:835px) {
+    .adaptiveRow{
+        display: flex;
+        flex-flow: column wrap;
+    }
+}

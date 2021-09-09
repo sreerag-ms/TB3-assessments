@@ -33,6 +33,8 @@
 
 .basicNavItem{
     margin-right: 10px;
+    text-decoration: none;
+    color: var(--darkFontColor);
 }
 
 #title{
